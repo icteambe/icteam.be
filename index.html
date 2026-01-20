@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICTEAM — Cloud engineering studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1324;
+      --bg-alt: #0a1f1d;
+      --panel: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #e2e8f0;
+      --muted: #cbd5e1;
+      --accent: #5af3c1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Manrope", -apple-system, system-ui, sans-serif;
+      background: radial-gradient(120% 120% at 20% 10%, rgba(90, 243, 193, 0.18), transparent 40%),
+                  radial-gradient(120% 120% at 90% 0%, rgba(64, 160, 255, 0.20), transparent 38%),
+                  linear-gradient(140deg, var(--bg), var(--bg-alt));
+      color: var(--text);
+      min-height: 100vh;
+    }
+    main { max-width: 1000px; margin: 0 auto; padding: 64px 24px 88px; }
+    header.hero { display: grid; gap: 18px; margin-bottom: 56px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 0.95rem;
+      width: fit-content;
+      letter-spacing: 0.01em;
+    }
+    .pill::before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(90, 243, 193, 0.18);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 3.8rem);
+      letter-spacing: -0.04em;
+    }
+    .lead { margin: 0; max-width: 680px; color: var(--muted); line-height: 1.6; font-size: 1.08rem; }
+    section.info { margin-top: 36px; }
+    .info-block {
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+    }
+    .info-block h4 { margin: 0 0 12px; font-size: 1rem; letter-spacing: 0.01em; }
+    dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
+    dt { font-weight: 600; color: #e0f2fe; }
+    dd { margin: 0; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 32px; color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
+    @media (max-width: 640px) {
+      main { padding: 48px 18px 72px; }
+      h1 { font-size: clamp(2.4rem, 9vw, 3.2rem); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <span class="pill">ICTEAM BV</span>
+    </header>
+
+    <section class="info">
+      <div class="info-block">
+        <dl>
+          <div>
+            <dt>Address</dt>
+            <dd>
+              Lijsterdreef (LIN) 42<br>
+              3210 Lubbeek, Belgium
+            </dd>
+          </div>
+          <div>
+            <dt>KBO / VAT</dt>
+            <dd>BE 0818.366.828</dd>
+          </div>
+          <div>
+            <dt>Peppol registration ID</dt>
+            <dd>0208:0818366828</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer></footer>
+  </main>
+</body>
+</html>
